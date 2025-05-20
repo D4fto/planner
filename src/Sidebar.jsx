@@ -34,13 +34,13 @@ export function Sidebar(props){
     <div className="min-w-md max-w-md w-md bg-white dark:bg-gray-800 text-gray-400 border border-gray-700 flex flex-col">
         <h1 className="py-3 text-center font-bold text-xl">{`${actualDate.toLocaleDateString('pt-BR', {weekday: 'short'})} ${String(actualDate.getDate()).padStart(2,"0")}-${String(actualDate.getMonth()+1).padStart(2,"0")}-${actualDate.getFullYear()}`}</h1>
         {addingNewTask ? (
-            <NewTaskForms {...props}  teste={console.log("addingNewTask")}/>
+            <NewTaskForms {...props}/>
         ) : editingTask ? (
-            <EditTask {...props} editingTask = {editingTask} teste={console.log("editingTask")}/>
+            <EditTask {...props} editingTask = {editingTask}/>
         ) : hasTasks ? (
-            <Tasks {...props} setAddingNewTask={setAddingNewTask} setEditingTask={setEditingTask}  teste={console.log("hasTasks")}  />
+            <Tasks {...props} setAddingNewTask={setAddingNewTask} setEditingTask={setEditingTask} />
         ) : (
-            <NoTasks setAddingNewTask={setAddingNewTask}  teste={console.log("NoTasks")} />
+            <NoTasks setAddingNewTask={setAddingNewTask} />
         )}
     </div>
     </>
