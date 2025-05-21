@@ -67,7 +67,7 @@ export function NewTaskForms(props){
         props.setData(props.data, props.actualDate, value, props.setDataState)
     }
     return <>
-    <form onSubmit={send} className="flex flex-col items-center justify-center w-full h-full px-5">
+    <form onSubmit={send} className="flex flex-col items-center overflow-y-scroll w-full h-full px-5">
         <h1 className="text-3xl">Horário:</h1>
         <div className="flex text-6xl">
             <input type="number" name="hour" id="hour" value={hour} onChange={handleHourChange} className="text-right w-[2ch] focus:outline-none focus:underline"/>

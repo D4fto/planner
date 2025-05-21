@@ -31,7 +31,7 @@ export function Sidebar(props){
         setEditingTask(false)
     },[data, actualDate])
     return <>
-    <div className="min-w-md max-w-md w-md bg-white dark:bg-gray-800 text-gray-400 border border-gray-700 flex flex-col">
+    <div className="min-w-[25dvw] max-w-[25dvw] w-md bg-white dark:bg-gray-800 text-gray-400 border border-gray-700 flex flex-col max-h-dvh">
         <h1 className="py-3 text-center font-bold text-xl">{`${actualDate.toLocaleDateString('pt-BR', {weekday: 'short'})} ${String(actualDate.getDate()).padStart(2,"0")}-${String(actualDate.getMonth()+1).padStart(2,"0")}-${actualDate.getFullYear()}`}</h1>
         {addingNewTask ? (
             <NewTaskForms {...props}/>
