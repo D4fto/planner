@@ -34,7 +34,7 @@ export function Dia(key, diaAtual, actualDate, setActualDate, data){
             defaultClass+
             (!isThisMonth?" backdrop-brightness-80 brightness-70 opacity-75 ":"") + 
             (isSelected?" saturate-200 bg-wwhite dark:bg-gray-700":"") +
-            (isToday?"  outline outline-8 outline-gray-700 outline-dashed outline-offset-[-4px]":"")
+            (isToday?"  outline outline-8 outline-gray-700 outline-dashed outline-offset-[-4px] z-2":"")
         }>
         <div className="relative">
 
